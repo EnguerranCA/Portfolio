@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  </head>
+  <body class="dotted">
+    <header class="header ">
+      <div class="header__text">
+        <p class="secondary-text">Bonjour, je suis Enguerran</p>
+        <h1 class="header__title">
+          Développeur WEB
+          <span>étudiant en BUT MMI </span>
+        </h1>
+
+        <div class="header__texticoned">
+          <img src="./assets/icons/pin.svg" alt="Pinpoint icon" />
+          <p class="secondary-text">Limoges</p>
+        </div>
+      </div>
+      <img
+        src="./assets/icons/scroll-arrow.svg"
+        alt="Scroll arrow"
+        class="header__scrollarrow"
+      />
+    </header>
+    <section class="projects">
+      <h2 class="secondary-text">Mes derniers projets</h2>
+      <div class="projects__container">
+        <div class="project__short">
+          <div class="project__sidetext">
+            <div class="project__info">
+              <h3 class="project__title">Let him quizz</h3>
+              <p class="project__description">
+                Un jeu de culture générale en 3D sur navigateur réalisé avec la
+                librairie AFrame jouable en réalité virtuelle. Il met en scène
+                le joueur dans une émission TV de 4 mini-jeux.
+              </p>
+            </div>
+
+            <div class="project__lireplus project__button">
+              <p href="#">En savoir plus</p>
+              <img
+                class="project__icon"
+                src="./assets/icons/arrow.svg"
+                alt="Arrow icon"
+              />
+            </div>
+          </div>
+          <div class="project__imagecontainer">
+            <img
+              src="./assets/images/lethimquizz.png"
+              alt="Let him quizz project"
+              class="project__image"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Wiki quizz -->
+      <div class="projects__container">
+        <div class="project__short">
+          <div class="project__sidetext">
+            <div class="project__info">
+              <h3 class="project__title">Wiki Quizz</h3>
+              <p class="project__description">
+                Un générateur de QCM marchant avec l'API de Wikipedia. Il
+                analyse les images présentes sur une page Wikipedia et récupère
+                leurs descriptions pour les transformer en propositions. Je
+                l'avais créé à la base pour apprendre les drapeaux du monde et
+                je l'ai par la suite généralisé.
+              </p>
+            </div>
+          </div>
+          <div class="project__imagecontainer">
+            <img
+              src="./assets/images/wikiquizz.jpg"
+              alt="Let him quizz project"
+              class="project__image"
+            />
+          </div>
+        </div>
+        <div class="project__long hidden">
+          <div class="project__row project__row--reverse">
+            <p class="project__description">
+              Un générateur de QCM marchant avec l'API de Wikipedia. Il analyse
+              les images présentes sur une page Wikipedia et récupère leurs
+              descriptions pour les transformer en propositions. Je l'avais créé
+              à la base pour apprendre les drapeaux du monde et je l'ai par la
+              suite généralisé.
+            </p>
+            <img
+              src="./assets/images/wikiquizz.jpg"
+              alt="Wiki quizz project"
+              class="project__image"
+            />
+          </div>
+        </div>
+        <div class="project__buttons">
+            <div class="project__lireplus project__button">
+                <p href="#">En savoir plus</p>
+                <img
+                  class="project__icon"
+                  src="./assets/icons/arrow.svg"
+                  alt="Arrow icon"
+                />
+              </div>
+            <div class="project__demo project__button">
+                <p href="#">Voir la démo</p>
+                <img
+                  class="project__icon"
+                  src="./assets/icons/arrow.svg"
+                  alt="Arrow icon"
+                />
+              </div>
+            </div>
+        </div>
+        
+
+      </div>
+    </section>
+  </body>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+    :root {
+      --primary-color: #2e1b06;
+      --secondary-color: #7f7f7f;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    
+    .dotted {
+        background-image: radial-gradient(#ddd 5%, transparent 5%),
+            radial-gradient(#ddd 5%, transparent 5%);
+        background-color: #f5f5f5;
+        background-position: 0 0, 50px 50px;
+        background-size: 50px 50px;
+        background-attachment: fixed;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Montserrat", sans-serif;
+      background-color: #f5f5f5;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+    }
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .header__text {
+      text-align: center;
+    }
+
+    .header__title {
+      font-size: 6rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--primary-color);
+      margin: 0;
+    }
+
+    .header__title span {
+      font-size: 4rem;
+      display: block;
+    }
+
+    .secondary-text {
+      font-size: 2.25rem;
+      color: var(--secondary-color);
+      font-weight: 400;
+    }
+
+    .header__texticoned {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .header__texticoned img {
+      width: 2rem;
+      margin-right: 0.5rem;
+    }
+
+    .header__scrollarrow {
+      margin-top: 5rem;
+    }
+
+    /* Section projects */
+    .projects {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+
+      width: 100%;
+      max-width: 80rem;
+    }
+
+    .project__title {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--primary-color);
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .projects__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      width: 100%;
+      padding: 2rem;
+      background-color: #f5f5f5;
+
+      border: 1px solid var(--secondary-color);
+      border-radius: 1.5rem;
+    }
+
+    .project__short {
+      display: flex;
+      gap: 2rem;
+      height: 100%;
+    }
+
+    .project__sidetext {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project__info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .project__description {
+      font-size: 1.25rem;
+      color: var(--secondary-color);
+      font-weight: 400;
+    }
+
+    .project__buttons {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .project__button {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      background-color: var(--primary-color);
+      width: fit-content;
+      border-radius: 1.5rem;
+      padding: 0.5rem 1rem;
+      margin-top: 2rem;
+
+      cursor: pointer;
+    }
+
+
+
+    .project__button p {
+      font-size: 1.5rem;
+      color: #f5f5f5;
+      font-weight: 700;
+    }
+
+    .project__icon {
+      width: 2rem;
+    }
+
+    .project__image {
+      border-radius: 1.5rem;
+      max-width: 30rem;
+    }
+
+    .project__imagecontainer {
+      max-width: 40rem;
+    }
+
+    .project__long {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      overflow: hidden;
+      height: 100%;
+      transition: 0.5s;
+
+      max-height: 1000px; /* Adjust this value based on the content height */
+      transition: max-height 0.5s ease-in;
+    }
+
+    .project__row {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .project__row--reverse {
+      flex-direction: row-reverse;
+    }
+
+    .project__icon--reverse {
+      transform: rotate(180deg);
+      transition: 0.1s;
+    }
+
+    .hidden {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out;
+    }
+    
+
+
+
+  </style>
+
+  <script>
+
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // GSAP animations
+    gsap.from(".header__title", {
+        duration: 1.5,
+        y: -50,
+        opacity: 0,
+        ease: "bounce.out",
+        delay: 0.5
+    });
+
+    gsap.from(".header__texticoned", {
+        duration: 1,
+        x: -100,
+        opacity: 0,
+        ease: "power2.out",
+        delay: 1
+    });
+
+    // Arrow animation
+
+    gsap.from(".header__scrollarrow", {
+        duration: 1,
+        opacity: 0,
+        ease: "power2.out",
+        delay: 1.5,
+    });
+
+    gsap.to(".header__scrollarrow", {
+                y: -20,
+                repeat: -1,
+                yoyo: true,
+                ease: "power1.inOut",
+                duration: 1
+            });
+
+
+    gsap.from('.projects__container', {
+        scrollTrigger: {
+            trigger: '.projects',
+            start: 'top 80%',
+            toggleActions: 'play none none none'
+        },
+        x: -100,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.3 // Add stagger to animate each container sequentially
+    });
+    
+    // Lire plus button
+    document.addEventListener("DOMContentLoaded", function () {
+      const lirePlusButtons = document.querySelectorAll(".project__lireplus");
+
+      lirePlusButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          const projectContainer = this.closest(".projects__container");
+          const projectLong = projectContainer.querySelector(".project__long");
+          const icon = this.querySelector(".project__icon");
+
+          if (projectLong.classList.contains("hidden")) {
+            projectLong.classList.remove("hidden");
+            icon.classList.add("project__icon--reverse");
+            this.querySelector("p").textContent = "En savoir moins";
+          } else {
+            projectLong.classList.add("hidden");
+            icon.classList.remove("project__icon--reverse");
+            this.querySelector("p").textContent = "En savoir plus";
+          }
+        });
+      });
+    });
+
+  </script>
+</html>
