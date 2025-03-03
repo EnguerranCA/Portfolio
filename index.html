@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Portfolio Enguerran Caro--Alquier</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
   </head>
@@ -21,44 +21,17 @@
           <p class="secondary-text">Limoges</p>
         </div>
       </div>
-      <img
-        src="./assets/icons/scroll-arrow.svg"
-        alt="Scroll arrow"
-        class="header__scrollarrow"
-      />
+      <a href="#projects">
+        <img
+          src="./assets/icons/scroll-arrow.svg"
+          alt="Scroll arrow"
+          class="header__scrollarrow"
+        />
+      </a>
     </header>
-    <section class="projects">
+    <section id="projects" class="projects">
       <h2 class="secondary-text">Mes derniers projets</h2>
-      <div class="projects__container">
-        <div class="project__short">
-          <div class="project__sidetext">
-            <div class="project__info">
-              <h3 class="project__title">Let him quizz</h3>
-              <p class="project__description">
-                Un jeu de culture générale en 3D sur navigateur réalisé avec la
-                librairie AFrame jouable en réalité virtuelle. Il met en scène
-                le joueur dans une émission TV de 4 mini-jeux.
-              </p>
-            </div>
 
-            <div class="project__lireplus project__button">
-              <p href="#">En savoir plus</p>
-              <img
-                class="project__icon"
-                src="./assets/icons/arrow.svg"
-                alt="Arrow icon"
-              />
-            </div>
-          </div>
-          <div class="project__imagecontainer">
-            <img
-              src="./assets/images/lethimquizz.png"
-              alt="Let him quizz project"
-              class="project__image"
-            />
-          </div>
-        </div>
-      </div>
 
       <!-- Wiki quizz -->
       <div class="projects__container">
@@ -86,14 +59,29 @@
         <div class="project__long hidden">
           <div class="project__row project__row--reverse">
             <p class="project__description">
-              Un générateur de QCM marchant avec l'API de Wikipedia. Il analyse
-              les images présentes sur une page Wikipedia et récupère leurs
-              descriptions pour les transformer en propositions. Je l'avais créé
-              à la base pour apprendre les drapeaux du monde et je l'ai par la
-              suite généralisé.
+              Depuis quelques années, j'ai développé une passion pour les drapeaux du monde.
+              Mais, après avoir apris les drapeaux des pays de l'ONU, je voulais en apprendre plus.
+              Mais le problème était que je n'ai trouvé aucun site qui me permettait d'apprendre des 
+              listes de drapeaux plus niche comme les préfectures japonnaises par exemple.
+              Or je me suis rendu compte que ces listes existaient sur Wikipedia. C'est là que j'ai eu 
+              l'idée de créer un générateur de QCM qui marche avec l'API de Wikipedia.
             </p>
             <img
-              src="./assets/images/wikiquizz.jpg"
+              src="./assets/images/wikiquizzUI.jpg"
+              alt="Wiki quizz project"
+              class="project__image"
+            />
+          </div>
+          <div class="project__row">
+            <p class="project__description">
+              Je me suis alors informé sur le fonctionnement de l'API WikiMedia qui est celle qui gère les images de Wikipedia.
+              J'ai découvert qu'il était possible de récupérer les descriptions des images ainsi que le lien de ces dernières.
+              En javascript, j'ai donc préparé des requêtes pour récupérer les images et leurs descriptions puis j'ai créé une interface
+              pour les transformer en propositions de QCM et les rendre dans une gallerie. Cette dernière a été crée avec TailwindCSS et 
+              fonctionne avec un système de tempalting.
+            </p>
+            <img
+              src="./assets/images/wikiquizzgallery.jpg"
               alt="Wiki quizz project"
               class="project__image"
             />
@@ -108,19 +96,132 @@
                   alt="Arrow icon"
                 />
               </div>
-            <div class="project__demo project__button">
-                <p href="#">Voir la démo</p>
+              <a href="https://github.com/EnguerranCA/FlagCommons" class="project__github project__button">
+                <p class="project__buttontext">Github</p>
+                <img src="./assets/icons/github.svg" alt="GitHub icon" />
+              </a>
+            <a class="project__demo project__button" href="https://enguerran.pro/project/WikiQuizz/client">
+                <p class="project__buttontext">Voir la démo</p>
+                <img
+                  class="project__icon"
+                  src="./assets/icons/arrow.svg"
+                  alt="Arrow icon"
+                />
+            </a>
+            </div>
+        </div>
+
+      <!-- Let him Quizz -->
+      <div class="projects__container">
+        <div class="project__short">
+          <div class="project__sidetext">
+            <div class="project__info">
+              <h3 class="project__title">Let him quizz</h3>
+              <p class="project__description">
+                Un jeu de culture générale en 3D sur navigateur réalisé avec la
+                librairie AFrame jouable en réalité virtuelle. Il met en scène
+                le joueur dans une émission TV de 4 mini-jeux.
+              </p>
+            </div>
+          </div>
+          <div class="project__imagecontainer">
+            <img
+              src="./assets/images/lethimquizz.png"
+              alt="Let him quizz project"
+              class="project__image"
+            />
+          </div>
+        </div>
+        <div class="project__long hidden">
+
+          <div class="project__row ">
+            <iframe class="project__iframe" width="560" height="315" src="https://www.youtube.com/embed/5laj9y2nBRs?si=oYDpsLCHQ9GiRUE-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p class="project__description">
+              Dans le cadre d'un projet universitaire, nous avions 1 mois pour réaliser un jeu en 3D sur navigateur 
+              qui devait permettre d'apprendre l'anglais de manière ludique. Nous avons donc décidé de créer un jeu de
+              culture générale du nom de Let Him Quizz. <br> 
+              Le jeu met en scène un jour qui participe à une émission TV de culture générale. Il doit répondre à des questions
+              dans 4 mini-jeux différents pour gagner des points. Le jeu a été réalisé avec la librairie AFrame et est jouable
+              en VR.
+            </p>
+          </div>
+          <div class="project__row">
+            <p class="project__description">
+              Mon rôle dans ce projet a d'abord été de créer les 2 premiers mini-jeux. Le prmier était Ticking Away, un jeu dans le quel le 
+              joueur a 30 secondes pour répondre à un maximum de questions correctement. Cela m'a alors demandé de faire des requêtes à une API 
+              créée par un de mes camarades ainsi que de gérer le mélange des propositions et surtout l'identification des clics dans un environnement 3D.
+            </p>
+            <img
+              src="./assets/images/LHQtickingaway.jpg"
+              alt="Wiki quizz project"
+              class="project__image"
+            />
+          </div>
+          <div class="project__row project__row--reverse">
+            <p class="project__description">
+              Le second mini-jeu était inspiré du site Geoguessr, un jeu dans lequel le joueur est placé dans une rue du monde et doit trouver où il est. J'ai 
+              alors adapté ce concept à la VR en créant une sphère qui affiche une image à 360° et en demandant au joueur de cliquer sur l'endroit où il 
+              pense que la photo a été prise. Cela m'a demandé d'utiliser le système d'animation de AFrame pour animer la sphère et j'ai pu réutiliser 
+              le premier mini-jeu pour gérer le clic sur la bonne reponse.
+            </p>
+            <img
+              src="./assets/images/LHQfindtheplace.jpg"
+              alt="Wiki quizz project"
+              class="project__image"
+            />
+        </div>
+      </div>
+        <div class="project__buttons">
+            <div class="project__lireplus project__button">
+                <p href="#">En savoir plus</p>
                 <img
                   class="project__icon"
                   src="./assets/icons/arrow.svg"
                   alt="Arrow icon"
                 />
               </div>
-            </div>
-        </div>
-        
+              <a href="https://github.com/bastienggg/Let_him_quizz/" class="project__github project__button">
+                <p class="project__buttontext">Github</p>
+                <img src="./assets/icons/github.svg" alt="GitHub icon" />
+              </a>
+            <a class="project__demo project__button" href="https://bastienggg.github.io/Let_him_quizz/">
+                <p class="project__buttontext">Voir la démo</p>
+                <img
+                  class="project__icon"
+                  src="./assets/icons/arrow.svg"
+                  alt="Arrow icon"
+                />
+            </a>
+          </div>
 
       </div>
+    </section>
+    <section class="reseaux">
+        <h2 class="secondary-text">Retrouvez-moi sur :</h2>
+        <ul class="reseaux__list">
+            <li class="reseaux__item">
+                <a href="https://www.linkedin.com/in/enguerran-caro-alquier/" target="_blank">
+                    <img src="./assets/icons/linkedin.svg" alt="LinkedIn icon" />
+                    LinkedIn
+                </a>
+            </li>
+            <li class="reseaux__item">
+                <a href="https://github.com/EnguerranCA" target="_blank">
+                    <img src="./assets/icons/github.svg" alt="GitHub icon" />
+                    GitHub
+                </a>
+            </li>
+            <li class="reseaux__item">
+                <a href="https://www.canva.com/design/DAF_YsD1Csc/vP7IgRdrWgv_4nY2i8HoPg/view?utm_content=DAF_YsD1Csc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h14f3c97564" target="_blank">
+                    <!-- <img src="./assets/icons/cv.svg" alt="CV icon" /> -->
+                    Mon CV
+                </a>
+            </li>
+        </ul>
+
+    <section class="contact">
+        <h2 class="secondary-text">Je suis actuellement en recherche de stage, <br> donc si mon profil vous intéresse n'hésitez pas à me contacter :</h2>
+          <a class="contact__email" href="mailto:enguerran.caroalquier@gmail.com">enguerran.caroalquier@gmail.com</a>
     </section>
   </body>
   <style>
@@ -147,6 +248,10 @@
         background-attachment: fixed;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -157,6 +262,8 @@
       flex-direction: column;
       justify-content: start;
       align-items: center;
+
+      
     }
 
     .header {
@@ -262,6 +369,7 @@
       font-size: 1.25rem;
       color: var(--secondary-color);
       font-weight: 400;
+
     }
 
     .project__buttons {
@@ -283,6 +391,18 @@
       cursor: pointer;
     }
 
+    
+
+    .project__github {
+      background-color: #1b1f23;
+      color: var(--primary-color);
+    }
+
+    .project__github img {
+      width: 2rem;
+      filter: invert();
+    }
+
 
 
     .project__button p {
@@ -300,6 +420,12 @@
       max-width: 30rem;
     }
 
+    .project__iframe {
+      border-radius: 1.5rem;
+      width: 60rem; 
+      aspect-ratio: 16/9;
+    }
+
     .project__imagecontainer {
       max-width: 40rem;
     }
@@ -311,8 +437,9 @@
       overflow: hidden;
       height: 100%;
       transition: 0.5s;
+      width: 100%;
 
-      max-height: 1000px; /* Adjust this value based on the content height */
+      max-height: 1500px; /* Adjust this value based on the content height */
       transition: max-height 0.5s ease-in;
     }
 
@@ -320,10 +447,15 @@
       display: flex;
       align-items: center;
       gap: 2rem;
-    }
+      width: 100%;
+    } 
 
     .project__row--reverse {
       flex-direction: row-reverse;
+    }
+
+    .project__row--middle {
+      justify-content: center;
     }
 
     .project__icon--reverse {
@@ -337,7 +469,76 @@
       transition: max-height 0.5s ease-out;
     }
     
+    .project__buttontext {
+      text-decoration: none;
+    }
+    /* Contact */
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+      width: 100%;
+      max-width: 80rem;
+      margin-bottom: 5rem;
+    }
 
+    .contact__email {
+      font-size: 2rem;
+      color: var(--primary-color);
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .contact .secondary-text {
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    /* Réseaux */
+    .reseaux {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+      width: 100%;
+      max-width: 80rem;
+    }
+
+    .reseaux__list {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    .reseaux__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      font-weight: 500;
+    }
+
+    .reseaux__item img {
+      width: 2rem;
+    }
+
+    .reseaux__item a {
+      text-decoration: none;
+      color: var(--primary-color);
+    }
+
+    .reseaux__item a:hover {
+      text-decoration: underline;
+    }
 
 
   </style>
@@ -391,7 +592,7 @@
         opacity: 0,
         duration: 1,
         stagger: 0.3 // Add stagger to animate each container sequentially
-    });
+    });4
     
     // Lire plus button
     document.addEventListener("DOMContentLoaded", function () {
