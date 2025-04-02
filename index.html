@@ -10,7 +10,9 @@
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
   </head>
-  <body class="dotted">
+  <body>
+    
+  <main class="dotted">
     <header class="header ">
       <div class="header__text">
         <p class="secondary-text">Bonjour, je suis Enguerran</p>
@@ -478,6 +480,7 @@
         <h2 class="secondary-text">Je suis actuellement en recherche de stage, <br> donc si mon profil vous intéresse n'hésitez pas à me contacter :</h2>
           <a class="contact__email" href="mailto:enguerran.caroalquier@gmail.com">enguerran.caroalquier@gmail.com</a>
     </section>
+    </main>
   </body>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
@@ -493,6 +496,20 @@
       box-sizing: border-box;
     }
 
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Empêche le débordement horizontal */
+}
+
     
     .dotted {
         background-image: radial-gradient(#ddd 5%, transparent 5%),
@@ -507,9 +524,10 @@
       scroll-behavior: smooth;
     }
 
-    body {
+    main {
       margin: 0;
       padding: 0;
+      width: 100vw;
       font-family: "Montserrat", sans-serif;
       background-color: #f5f5f5;
 
@@ -788,8 +806,85 @@
       text-decoration: none;
     }
 
+        /* Contact */
+        .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+      width: 100%;
+      max-width: 80rem;
+      margin-bottom: 5rem;
+    }
+
+    .contact__email {
+      font-size: 2rem;
+      color: var(--primary-color);
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .contact .secondary-text {
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    /* Réseaux */
+    .reseaux {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+      width: 100%;
+      max-width: 80rem;
+    }
+
+    .reseaux__list {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    .reseaux__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      font-weight: 500;
+    }
+
+    .reseaux__item img {
+      width: 2rem;
+    }
+
+    .reseaux__item a {
+      text-decoration: none;
+      color: var(--primary-color);
+    }
+
+    .reseaux__item a:hover {
+      text-decoration: underline;
+    }
+
+
+
+
     /* Mobile */
     @media (max-width: 768px) {
+      
+
+      .header {
+        height: 100vh;
+        padding: 2rem;
+      }
       .header__title {
         font-size: 4rem;
       }
@@ -885,74 +980,63 @@
 
     }
 
+    @media (max-width: 530px) {
+      .header__title {
+        font-size: 3rem;
+      }
 
-    /* Contact */
-    .contact {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      padding: 2rem;
-      width: 100%;
-      max-width: 80rem;
-      margin-bottom: 5rem;
+      .header__title span {
+        font-size: 1.5rem;
+      }
+
+      .secondary-text {
+        font-size: 1.25rem;
+      }
+
+      .projects__container {
+        padding: 0.5rem;
+      }
+
+      .project__title {
+        font-size: 1.5rem;
+      }
+
+      .project__description {
+        font-size: 0.9rem;
+      }
+
+      .project__button p {
+        font-size: 0.9rem;
+      }
+      .contact__email {
+        font-size: 1rem;
+
+      }
+      .secondary-text {
+        font-size: 1rem;
+      }
+
+      .contact .secondary-text {
+        font-size: 1rem;
+      }
+
+      .reseaux__item {
+        font-size: 1.5rem;
+      }
+      .reseaux__list {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .competences__title {
+        font-size: 2rem;
+      }
+
+      .competences__listitem {
+        font-size: 1.5rem;
+      }
     }
 
-    .contact__email {
-      font-size: 2rem;
-      color: var(--primary-color);
-      font-weight: 500;
-      text-align: center;
-    }
-
-    .contact .secondary-text {
-      text-align: center;
-      font-size: 1.5rem;
-    }
-
-    /* Réseaux */
-    .reseaux {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      padding: 2rem;
-      width: 100%;
-      max-width: 80rem;
-    }
-
-    .reseaux__list {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 1rem;
-      width: 100%;
-    }
-
-    .reseaux__item {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      font-size: 1.5rem;
-      color: var(--primary-color);
-      font-weight: 500;
-    }
-
-    .reseaux__item img {
-      width: 2rem;
-    }
-
-    .reseaux__item a {
-      text-decoration: none;
-      color: var(--primary-color);
-    }
-
-    .reseaux__item a:hover {
-      text-decoration: underline;
-    }
 
 
   </style>
