@@ -79,6 +79,10 @@
         <div class="competences__item">
           <h3 class="competences__title">Back-end</h3>
           <ul class="competences__list">
+                        <li class="competences__listitem">
+              <i class="devicon-nextjs-plain"></i>
+              NextJS
+            </li>
             <li class="competences__listitem">
               <i class="devicon-nodejs-plain"></i>
               NodeJS
@@ -126,6 +130,189 @@
     </section>
     <section id="projects" class="projects">
       <h2 class="secondary-text">Mes derniers projets</h2>
+      <!-- Village Étape -->
+      <div class="projects__container">
+        <div class="project__short">
+          <div class="project__sidetext">
+            <div class="project__info">
+              <h3 class="project__title">Village Étape</h3>
+              <p class="project__description">
+                Dans le cadre de mon stage de deuxième année en BUT MMI, j'ai eu l'occasinon de créer un 
+                chatbot pour le site Wordpress de Village Étape qui était en train d'être refait par 
+                l'agence 3310 Street où j'étais. <br>
+                Ce projet m'a permis de comprendre l'intérêt de savoir intégrer des plugins wordpress 
+                et a élargit ma vision sur le métier de développeur web. <br>
+              </p>
+            </div>
+          </div>
+          <div class="project__imagecontainer">
+            <img
+              src="./assets/images/VEMain.jpg"
+              alt="Wiki quizz project"
+              class="project__image"
+            />
+          </div>
+        </div>
+        <div class="project__long hidden">
+          <div class="project__row project__row--reverse">
+            <p class="project__description">
+              Avec Julian, l'autre stagiaire de l'agence, nous avons commencé par faire un benchmark pour voir les solutions 
+              de plugins de chatbot existantes. Nous nous sommes alors heurtés au fait que les plugins étaient pour la 
+              plupart payants, et nous devions trouver une alternative gratuite. <br>
+              Heureusement, je suis tombé sur le plugin WPBot qui était gratuit même s'il était moins téléchargé. En le configurant, 
+              je me suis confronté à des manquements dans le plugin au niveau du CSS personnalisé. J'ai dû alors passer par le 
+              CSS personnalisé de Wordpress pour modifier l'apparence du chatbot et le rendre plus cohérent avec le site.
+            </p>
+            <img
+              src="./assets/images/VECSS.jpg"
+              alt="Wiki quizz project"
+              class="project__image"
+            />
+          </div>
+          <div class="project__row">
+            <p class="project__description">
+              A partir de là, j'ai pu ajouter du contenu au chatbot pour qu'il puisse répondre aux questions les plus fréquentes des visiteurs du site.
+              J'ai eu un léger soucis car je devais écrire en blanc pour éviter que le texte soit en noir sur rose, ce qui est illisible. Mais donc en contrepartie 
+              le texte est difficile à lire dans la zone d'édition du plugin. <br>
+              J'ai alors fait un petit guide pour les administrateurs du site afin qu'ils puissent ajouter eux aussi du contenu.
+            </p>
+            <img
+              src="./assets/images/VEFigma.jpg"
+              alt="Wiki quizz project"
+              class="project__image"
+            />
+          </div>
+          <div class="project__row project__row--reverse">
+            <p class="project__description">
+              Ce petit projet m'a beacuoup stimulé d'un point de vue créatif car je devais synthétiser les informations 
+              du site et conseiller les utilisateurs tout en gardant le personnage de Philémon, mascotte de Village Étape. <br>
+              De plus, j'avais des dessins de Philémon à ma disposition que j'ai pu intégrer aux réponses du chatbot pour le
+              rendre plus vivant. <br>
+
+            </p>
+            <img
+              src="./assets/images/VEEdition.jpg"
+              alt="Wiki quizz project"
+              class="project__image"
+            />
+          </div>
+        </div>
+        <div class="project__buttons">
+            <div class="project__lireplus project__button">
+                <p href="#">En savoir plus</p>
+                <img
+                  class="project__icon"
+                  src="./assets/icons/arrow.svg"
+                  alt="Arrow icon"
+                />
+              </div>
+              <!-- <a href="https://github.com/EnguerranCA/FlagCommons" class="project__github project__button">
+                <p class="project__buttontext">Github</p>
+                <img src="./assets/icons/github.svg" alt="GitHub icon" />
+              </a> -->
+            <a class="project__demo project__button" href="https://village-etape.fr/">
+                <p class="project__buttontext">Voir la démo</p>
+                <img
+                  class="project__icon"
+                  src="./assets/icons/demo.svg"
+                  alt="Arrow icon"
+                />
+            </a>
+            </div>
+        </div>
+      <!-- Edons Levée de fonds -->
+      <div class="projects__container">
+        <div class="project__short">
+          <div class="project__sidetext">
+            <div class="project__info">
+              <h3 class="project__title">Edons Levée de fonds</h3>
+              <p class="project__description">
+                Une web app de levée de fonds fonctionnant avec une partie mobile pour les promesses 
+                de dons et un affichage pour le grand écran de la levée. J'ai amélioré cette application
+                dans le cadre de mon stage de 2ème année dans l'agence 3310 Street et de la préparation 
+                d'un événement avec la WWF. <br>
+                J'ai dû y appliquer plusieurs correctifs mais aussi des ajouts de fonctionnalités clés
+                pour s'adapter à l'évolution de la demande du client.
+              </p>
+            </div>
+          </div>
+          <div class="project__imagecontainer">
+            <img
+              src="./assets/images/edonsEcran.jpg"
+              alt="Wiki quizz project"
+              class="project__image"
+            />
+          </div>
+        </div>
+        <div class="project__long hidden">
+          <div class="project__row project__row--reverse">
+            <p class="project__description">
+              La première modification a été l'implémentation d'un websocket pour permettre une communication en 
+              temps réel entre la partie mobile et le grand écran. Auparavant, la partie mobile envoyait des requêtes à 
+              intervalle régulier pour vérifier si de nouvelles promesses de dons avaient été faites, ce qui n'était pas viable 
+              pour une application d'envergure avec plusieurs centaines de connexions en simultané. Cela a alors été l'occasion pour 
+              moi de découvrir la librairie Socket.io afin de la faire fonctionner avec mon application.
+              Le produit est désormais scalable et peut supporter un grand nombre de connexions simultanées.
+            </p>
+            <img
+              src="./assets/images/edonsMeeting.jpg"
+              alt="Wiki quizz project"
+              class="project__image"
+            />
+          </div>
+          <div class="project__row">
+            <p class="project__description">
+              Ensuite, après un retour du client au cours d'une première réunion, j'ai retravaillé l'esthétique de l'application.
+              J'ai alors commencé par rendre dynamique le logo et les couleurs de l'application en fonction de la levée de fonds, 
+              puis j'ai pu retravailler l'interface pour la rendre plus moderne en maquettant avec Figma. <br>
+              Cette partie m'a beaucoup plu car c'était l'occasion d'utiliser mes compétences en UI dans un cradre professionnel, et 
+              voir que le résultat a plu au client a été très gratifiant.
+            </p>
+            <img
+              src="./assets/images/edonsRefonte.jpg"
+              alt="Wiki quizz project"
+              class="project__image"
+            />
+          </div>
+          <div class="project__row project__row--reverse">
+            <p class="project__description">
+              J'ai également ajouté plusieurs autres fonctionnalités comme l'inscription à la levée de fonds, les promesse de dons manuelles
+              depuis le back-office, l'import et export en CSV de la liste des mécènes et leurs promesses de dons...
+              <br>
+              Venait alors le jour de la levée de fonds avec la WWF. Mon collègue Nicolas s'est rendu à Paris avec Antoine le PDG de Edons pour
+              s'occuper de la partie régie de la soirée avec l'application, et la soirée s'est passée sans accrocs. <br>
+
+            </p>
+            <img
+              src="./assets/images/edonsSoiree.jpg"
+              alt="Wiki quizz project"
+              class="project__image"
+            />
+          </div>
+        </div>
+        <div class="project__buttons">
+            <div class="project__lireplus project__button">
+                <p href="#">En savoir plus</p>
+                <img
+                  class="project__icon"
+                  src="./assets/icons/arrow.svg"
+                  alt="Arrow icon"
+                />
+              </div>
+              <!-- <a href="https://github.com/EnguerranCA/FlagCommons" class="project__github project__button">
+                <p class="project__buttontext">Github</p>
+                <img src="./assets/icons/github.svg" alt="GitHub icon" />
+              </a> -->
+            <a class="project__demo project__button" href="https://enguerran.pro/project/WikiQuizz/client/dist/">
+                <p class="project__buttontext">Voir la démo</p>
+                <img
+                  class="project__icon"
+                  src="./assets/icons/demo.svg"
+                  alt="Arrow icon"
+                />
+            </a>
+            </div>
+        </div>
       <!-- Wiki quizz -->
       <div class="projects__container">
         <div class="project__short">
@@ -346,7 +533,74 @@
                   alt="Arrow icon"
                 />
               </div>
+              
               <a href="https://github.com/JulianDou/SAE3.01_DOUTRELIGNE_CAROALQUIER" class="project__github project__button">
+                <p class="project__buttontext">Github</p>
+                <img src="./assets/icons/github.svg" alt="GitHub icon" />
+              </a>
+              <a class="project__demo project__button" href="https://www.figma.com/proto/1gBh0SLJYto9Tyw3XF2jqr/Main-Document?node-id=20-195&starting-point-node-id=20%3A195">
+                <p class="project__buttontext">Voir la démo</p>
+                <img
+                  class="project__icon"
+                  src="./assets/icons/demo.svg"
+                  alt="Arrow icon"
+                />
+            </a>
+            <!-- <a class="project__demo project__button" href="https://bastienggg.github.io/Let_him_quizz/">
+                <p class="project__buttontext">Voir la démo</p>
+                <img
+                  class="project__icon"
+                  src="./assets/icons/demo.svg"
+                  alt="Arrow icon"
+                />
+            </a> -->
+          </div>
+
+      </div>
+      
+      <!-- Twitter clone -->
+      <div class="projects__container">
+        <div class="project__short">
+          <div class="project__sidetext">
+            <div class="project__info">
+              <h3 class="project__title">Clone de Twitter</h3>
+              <p class="project__description">
+                Une reproduction du site Twitter avec des fonctionnalités ajoutées par cycle itératifs, comme un système de like et de connexion par token.
+              </p>
+            </div>
+          </div>
+          <div class="project__imagecontainer">
+            <img
+              src="./assets/images/twitter1.webp"
+              alt="Let him quizz project"
+              class="project__image"
+            />
+          </div>
+        </div>
+        <div class="project__long hidden">
+
+          <div class="project__row project__row--reverse">
+            <p class="project__description">
+              Pour les profils utilisateur, j'ai fait en sorte que l'on puiss modifier sa photo de profil et sa bannière.
+              </p>
+            <img
+              src="./assets/images/twitter2.webp"
+              alt="Wiki quizz project"
+              class="project__image"
+            />
+          </div>
+      </div>
+        <div class="project__buttons">
+            <div class="project__lireplus project__button">
+                <p href="#">En savoir plus</p>
+                <img
+                  class="project__icon"
+                  src="./assets/icons/arrow.svg"
+                  alt="Arrow icon"
+                />
+              </div>
+              
+              <a href="https://github.com/EnguerranCA/Sae401DockerBase" class="project__github project__button">
                 <p class="project__buttontext">Github</p>
                 <img src="./assets/icons/github.svg" alt="GitHub icon" />
               </a>
@@ -361,6 +615,7 @@
           </div>
 
       </div>
+
 
       <!-- Data visualization -->
       <div class="projects__container">
@@ -475,6 +730,9 @@
                 </a>
             </li>
         </ul>
+    </section>
+    <a class="contact__email" href="https://portfolioenguerrancaroalquier.my.canva.site/">Mon portfolio Universitaire</a>
+
 
     <section class="contact">
         <h2 class="secondary-text">Je suis actuellement en recherche de stage, <br> donc si mon profil vous intéresse n'hésitez pas à me contacter :</h2>
@@ -982,7 +1240,7 @@
 
     @media (max-width: 530px) {
       .header__title {
-        font-size: 3rem;
+        font-size: 2.6rem;
       }
 
       .header__title span {
